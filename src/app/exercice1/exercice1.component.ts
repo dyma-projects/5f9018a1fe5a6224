@@ -6,11 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exercice1.component.css']
 })
 export class Exercice1Component implements OnInit {
-  public compteur: number = 0; 
+  compteur: number;
+  result: number;
 
-  constructor() { }
+  constructor() {
+  }
+
+  updateCompteur(counterValue: number): void {
+    this.result = counterValue;
+  }
 
   ngOnInit() {
+    this.compteur = 0;
   }
 
 }
